@@ -15,6 +15,7 @@ function BannerChannel() {
         } catch (err) {
             console.error(err);
         }
+        console.log(data);
     }
     useEffect(() => {
         getApi()
@@ -23,7 +24,7 @@ function BannerChannel() {
 
     return (
         <div className='text-white d-flex flex-column align-items-start justify-content-start m-5'>
-            <div className='text-start w-75'>
+            <div className='text-start w-75' style={{zIndex: "1"}}>
                 <div className='text-start w-75 mb-5'>
                     <h1 className='mb-1'>{data?.title}</h1>
                     <div className='mb-2'>
@@ -42,8 +43,8 @@ function BannerChannel() {
                     <button className='btn btn-secondary mx-2 px-4'>Share</button>
                 </div>
             </div>
-            <div style={{ position: 'fixed', zIndex: "-1", top: "0px" }}>
-                <img src={data?.image} alt={data?.image} className="vh-100 w-100" style={{ filter: 'blur(5px) brightness(100%)', objectFit: 'cover' }} />
+            <div style={{ position: 'fixed', zIndex: "0", top: "0px" }}>
+                <img src={data?.playlist[0]?.image} alt={data?.playlist[0]?.image} className="vh-100 w-100" style={{ filter: 'blur(15px) brightness(80%)', objectFit: 'cover' }} />
             </div>
         </div>
     )
