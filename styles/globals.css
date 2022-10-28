@@ -1,9 +1,12 @@
 html,
 body {
-  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #141523 !important;
 }
 
 a {
@@ -20,7 +23,113 @@ a {
     color-scheme: dark;
   }
   body {
-    color: white;
-    background: black;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #141523 !important;
   }
+}
+
+
+/* my css */
+
+
+._dynamicBlur_1a0xz_1 {
+  position: fixed;
+  z-index: 0;
+}
+.bg_image_blender {
+  position: absolute;
+  top: 0;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  filter: blur(20px) brightness(60%);
+  object-fit: cover;
+}
+._title_1wg2e_19 {
+  height: 2.4em;
+  overflow: hidden;
+  color: white;
+  font-family: Trebuchet MS, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  line-height: 1.2em;
+  text-align: left;
+  text-shadow: 0 2px 4px rgb(0 0 0 / 14%), 0 3px 4px rgb(0 0 0 / 12%),
+    0 1px 5px rgb(0 0 0 / 20%);
+}
+._titleContainer_1wg2e_142 {
+  width: 100%;
+  min-height: 19px;
+  margin-top: 8px;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+._poster_1wg2e_15 {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: #2b3b57;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 4px;
+  box-shadow: 0 8px 10px #00000024, 0 3px 14px #0000001f, 0 4px 5px #0003;
+  transition: box-shadow 0.1s ease;
+  cursor: pointer;
+}
+
+.card_div_img:hover {
+  border: 2px solid white;
+  border-radius: 4px;
+}
+.duration_display_time{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  z-index: 999;
+  color: white;
+  font-weight: 500;
+  padding: 2px 12px;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: #0009;
+}
+.duration_display_live{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  z-index: 999;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 3px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: #ce153f;
+}
+.card_div_img:hover .duration_display_live, .card_div_img:hover .duration_display_time {
+  display: none;
+}
+
+.description_box{
+  display: none;
+}
+
+.card_div_img:hover .description_box{
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  padding: 50px 10px 10px;
+  left: 0px;
+  z-index: 999;
+  color: white;
+  background-color: #0009;
+}
+.landing_box{
+  font-size: 10px !important;
 }
