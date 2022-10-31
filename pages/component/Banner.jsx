@@ -74,7 +74,7 @@ function Banner(props) {
                                             </span>
                                         </div>
                                     </div>
-                                    <Image src={item?.image} alt={"lsdkfjs"} width={'720'} height={'720'} className='img-fluid w-100 rounded' />
+                                    <Image src={item?.image} alt={"lsdkfjs"} width={'720'} height={'420'} className='img-fluid w-100 rounded' />
                                 </div>
                                 <div className='_titleContainer_1wg2e_142'>
                                     <div className='_title_1wg2e_19'>{item.title}</div>

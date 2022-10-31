@@ -73,7 +73,7 @@ function LandingPage(props) {
                                                 </span>
                                             </div>
                                         </div>
-                                        <Image src={item?.image} width='720' height='720' alt="akdjfa" className='img-fluid rounded' />
+                                        <Image src={item?.image} width='720' height='420' alt="akdjfa" className='img-fluid rounded' />
                                     </div>
                                 </div>
                                 <div className='_titleContainer_1wg2e_142'>
