@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -15,12 +16,11 @@ function BannerChannel() {
         } catch (err) {
             console.error(err);
         }
-        console.log(data);
     }
     useEffect(() => {
         getApi()
     }, [router.query.mediaid])
-
+    
 
     return (
         <div className='text-white d-flex flex-column align-items-start justify-content-start m-5'>
@@ -44,7 +44,7 @@ function BannerChannel() {
                 </div>
             </div>
             <div style={{ position: 'fixed', zIndex: "0", top: "0px" }}>
-                <img src={data?.playlist[0]?.image} alt={data?.playlist[0]?.image} className="vh-100 w-100" style={{ filter: 'blur(15px) brightness(80%)', objectFit: 'cover' }} />
+                <Image src={data?.playlist[0]?.image} alt={"lsdkfjs"} width={'720'} height={'720'} className="vh-100 w-100" style={{ filter: 'blur(15px) brightness(80%)', objectFit: 'cover' }} />
             </div>
         </div>
     )

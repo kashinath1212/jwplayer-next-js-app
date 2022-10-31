@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react'
 import Slider from 'react-slick';
@@ -36,6 +37,7 @@ function LandingPage(props) {
             console.error(error);
         }
     }
+    console.log(data);
 
     useEffect(() => {
         getApi()
@@ -71,7 +73,7 @@ function LandingPage(props) {
                                                 </span>
                                             </div>
                                         </div>
-                                        <img src={item.image} alt="akdjfa" className='img-fluid rounded' />
+                                        <Image src={item?.image} width='720' height='720' alt="akdjfa" className='img-fluid rounded' />
                                     </div>
                                 </div>
                                 <div className='_titleContainer_1wg2e_142'>

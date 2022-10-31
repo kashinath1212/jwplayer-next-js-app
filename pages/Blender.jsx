@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Banner from './component/Banner';
 import LandingPage from './component/LandingPage';
 
@@ -28,7 +29,7 @@ function Blender() {
       <div className="App">
         <div className='_dynamicBlur_1a0xz_1 '>
           <div>
-            <img src='https://cdn.jwplayer.com/v2/media/LEBW145Q/poster.jpg?width=720' className='bg_image_blender' alt='alk' />
+            <Image src='https://cdn.jwplayer.com/v2/media/LEBW145Q/poster.jpg?width=720' width='720' height='720' className='bg_image_blender' alt='alk' />
           </div>
         </div>
         <div className='w-100' style={{ overflow: "hidden" }}>

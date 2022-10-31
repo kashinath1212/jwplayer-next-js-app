@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react'
 import Slider from 'react-slick';
@@ -36,6 +37,7 @@ function Banner(props) {
             console.error(error);
         }
     }
+    console.log(data);
 
     useEffect(() => {
         getApi()
@@ -61,7 +63,7 @@ function Banner(props) {
                     const words = new Array(item?.description)
                     const newWords = words[0].split(' ')
                     return (
-                        <div className='' key={index} onClick={() => router.push({pathname: '/component/bannerChannel', query: {mediaid: `${item.mediaid}`}})}>
+                        <div className='' key={index} onClick={() => router.push({ pathname: '/component/bannerChannel', query: { mediaid: `${item.mediaid}` } })}>
                             <div className='m-2'>
                                 <div className='_poster_1wg2e_15 card_div_img'>
                                     <div className='duration_box'>
@@ -72,7 +74,7 @@ function Banner(props) {
                                             </span>
                                         </div>
                                     </div>
-                                    <img src={item.image} alt="akdjfa" className='img-fluid w-100 rounded' />
+                                    <Image src={item?.image} alt={"lsdkfjs"} width={'720'} height={'720'} className='img-fluid w-100 rounded' />
                                 </div>
                                 <div className='_titleContainer_1wg2e_142'>
                                     <div className='_title_1wg2e_19'>{item.title}</div>
