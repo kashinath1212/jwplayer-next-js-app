@@ -36,7 +36,7 @@ function BannerChannel(props) {
                 />
                 <meta
                     property="og:image"
-                    content="https://example.com/images/cool-page.jpg"
+                    content="https://assets-jpcust.jwpsrv.com/thumbnails/9pndcdhu-720.jpg"
                 />
             </Head>
             <ChannelContainer>
