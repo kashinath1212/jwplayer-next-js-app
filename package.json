@@ -1,5 +1,5 @@
 {
-  "name": "jwplayer-next-app",
+  "name": "jwplayer-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@elastic/elasticsearch": "^5.6.22",
+    "@nestjs/elasticsearch": "^8.1.0",
     "axios": "^1.1.3",
     "bootstrap": "^5.2.2",
     "next": "13.0.0",
@@ -28,5 +30,17 @@
     "@types/bootstrap": "^5.2.5",
     "eslint": "8.26.0",
     "eslint-config-next": "13.0.0"
-  }
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "next.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kashinath1212/jwplayer-next-js-app.git"
+  },
+  "author": "kahsinath",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kashinath1212/jwplayer-next-js-app/issues"
+  },
+  "homepage": "https://github.com/kashinath1212/jwplayer-next-js-app#readme"
 }
