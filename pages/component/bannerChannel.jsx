@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Head from 'next/head';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
@@ -24,6 +25,11 @@ function BannerChannel(props) {
 
     return (
         <div>
+            <Head>
+                <title>kashi</title>
+                <meta name="description" content="kashi" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
             <ChannelContainer>
                 <div className='text-start w-75' style={{ zIndex: "1" }}>
                     <div className='text-start w-75 mb-5'>
@@ -57,7 +63,7 @@ function BannerChannel(props) {
 }
 
 export async function getServerSideProps(context) {
-        const res = await axios.get(`https://cdn.jwplayer.com/v2/media/${context?.query?.mediaid}`)
+    const res = await axios.get(`https://cdn.jwplayer.com/v2/media/${context?.query?.mediaid}`)
 
     return {
         props: { mediaid: res.data } // will be passed to the page component as props
