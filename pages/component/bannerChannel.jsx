@@ -10,7 +10,7 @@ import { BannerBlurBg, Button, ChannelContainer, DynamicBlur, Span } from '../ap
 function BannerChannel(props) {
     const router = useRouter()
     const [data, setData] = useState(props?.mediaid)
-    console.log(data);
+    console.log(data?.playlist[0]?.image);
     // const getApi = async () => {
     //     try {
     //         const res = await axios.get(`https://cdn.jwplayer.com/v2/media/${router?.query?.mediaid}`)
@@ -27,22 +27,17 @@ function BannerChannel(props) {
     return (
         <div>
             <Head>
-                <meta charSet="utf-8" />
-                <title>{data?.title}</title>
-                <link rel="icon" href='/favicon.ico' />
-                <meta name="description" content={data?.description} />
-
-                <meta property="theme-color" content="#000000" />
-
-                <meta property="og:type" content="article" />
-                <meta property="og:title" content={data?.title} />
-
-                {/* <meta
-                    name="og:url"
-                    content={post.url}
-                /> */}
-                <meta property="og:description" content={data?.description} />
-                <meta property="og:image" content={data?.playlist[0]?.image} />
+                <title>Cool Title</title>
+                <meta name="description" content="Checkout our cool page" key="desc" />
+                <meta property="og:title" content="Social Title for Cool Page" />
+                <meta
+                    property="og:description"
+                    content="And a social description for our cool page"
+                />
+                <meta
+                    property="og:image"
+                    content="https://example.com/images/cool-page.jpg"
+                />
             </Head>
             <ChannelContainer>
                 <div className='text-start w-75' style={{ zIndex: "1" }}>
