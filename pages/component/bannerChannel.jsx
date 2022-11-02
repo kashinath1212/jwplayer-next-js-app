@@ -32,7 +32,7 @@ function BannerChannel(props) {
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content={data?.title} />
                 <meta property="og:description" content={data?.description} />
-                <meta property="og:image" content={data?.playlist[0]?.image} />
+                <meta property="og:image" content="https://assets-jpcust.jwpsrv.com/thumbnails/9pndcdhu-720.jpg" />
             </Head>
             <ChannelContainer>
                 <div className='text-start w-75' style={{ zIndex: "1" }}>
