@@ -3,13 +3,13 @@ import { useState } from "react";
 import { useEffect } from "react";
 import ReactJwPlayer from "react-jw-player";
 
-const JwplayerVideo = () => {
-    const router = useRouter()
-    const [mediaId, setMediaId] = useState(router.query.mediaid)
+const JwplayerVideo = (props) => {
+    // const router = useRouter()
+    const [mediaId, setMediaId] = useState(props.mediaid)
 
-    useEffect(() => {
-        setMediaId(router.query.mediaid)
-    }, [router])
+    // useEffect(() => {
+    //     setMediaId(router.query.mediaid)
+    // }, [router])
 
     return mediaId && (
         <div className="App">
@@ -27,5 +27,13 @@ const JwplayerVideo = () => {
         </div>
     )
 }
+export async function getServerSideProps(context) {
+    console.log(context);
+    return {
+        props: { mediaid: context?.query?.mediaid } // will be passed to the page component as props
+    }
+}
+
+
 
 export default JwplayerVideo;

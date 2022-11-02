@@ -1,8 +1,8 @@
 html,
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -24,20 +24,18 @@ a {
   }
   body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+      "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #141523 !important;
   }
 }
 
-
 /* my css */
 
-
-._dynamicBlur_1a0xz_1 {
+/* ._dynamicBlur_1a0xz_1 {
   position: fixed;
   z-index: 0;
 }
@@ -83,11 +81,7 @@ a {
   cursor: pointer;
 }
 
-.card_div_img:hover {
-  border: 2px solid white;
-  border-radius: 4px;
-}
-.duration_display_time{
+.duration_display_time {
   position: absolute;
   bottom: 0px;
   right: 0px;
@@ -99,7 +93,7 @@ a {
   border-radius: 5px;
   background-color: #0009;
 }
-.duration_display_live{
+.duration_display_live {
   position: absolute;
   bottom: 0px;
   right: 0px;
@@ -112,15 +106,43 @@ a {
   border-radius: 5px;
   background-color: #ce153f;
 }
-.card_div_img:hover .duration_display_live, .card_div_img:hover .duration_display_time {
+.line_clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+} */
+
+.card_div_img_banner:hover {
+  transition: ease;
+  z-index: 1;
+  transform: scale(1.035);
+}
+.card_div_img_banner:hover .banner_image{
+  z-index: 2;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+.card_div_img_landing:hover .landing_image{
+  border: 2px solid white;
+  z-index: 2;
+  border-radius: 5px;
+}
+.card_div_img_landing:hover {
+  transition: ease;
+  z-index: 1;
+  transform: scale(1.1);
+}
+.card_div_img:hover .duration_display_live,
+.card_div_img:hover .duration_display_time {
   display: none;
 }
 
-.description_box{
+.description_box {
   display: none;
 }
 
-.card_div_img:hover .description_box{
+.card_div_img:hover .description_box {
   display: block;
   position: absolute;
   bottom: 0px;
@@ -130,6 +152,6 @@ a {
   color: white;
   background-color: #0009;
 }
-.landing_box{
+.landing_box {
   font-size: 10px !important;
 }

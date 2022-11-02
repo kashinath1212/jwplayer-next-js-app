@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react'
 import Slider from 'react-slick';
+import { BannerTitle, DisplayDuration, LineClamp, PosterSection, TitleDiv } from '../api/StyledComponents';
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -37,7 +38,6 @@ function LandingPage(props) {
             console.error(error);
         }
     }
-    console.log(data);
 
     useEffect(() => {
         getApi()
@@ -57,32 +57,30 @@ function LandingPage(props) {
     return (
         <div>
             <Slider {...settings} className="">
-                {data?.map((item, index) => {
-                    const words = new Array(item?.description)
-                    const newWords = words[0].split(' ')
-                    return (
-                        < div className='kashi' key={index} onClick={() => router.push({ pathname: '/component/bannerChannel', query: { mediaid: `${item.mediaid}` } })}>
-                            <div className='m-2 '>
-                                <div className='card_div_img'>
-                                    <div className='_poster_1wg2e_15'>
-                                        <div className='duration_box'>
-                                            {item?.duration ? <span className='duration_display_time'>{Math.round(item?.duration / 60)}min</span> : <span className='duration_display_time'>Series</span>}
-                                            <div className='description_box landing_box'>
-                                                <span className="d-inline-block" tabIndex="0" data-toggle="tooltip" title={item?.description}>
-                                                    {newWords.map((des, i) => i < 13 && (des = des + ' ') || i === 26 && (`.......`))}
-                                                </span>
-                                            </div>
+                {data?.map((item, index) =>
+                    < div className='' key={index} onClick={() => router.push({ pathname: '/component/bannerChannel', query: { mediaid: `${item.mediaid}` } })}>
+                        <div className='m-2 card_div_img_landing'>
+                            <div className='card_div_img '>
+                                <PosterSection>
+                                    <div>
+                                        {item?.duration ? <DisplayDuration>{Math.round(item?.duration / 60)}min</DisplayDuration> : <DisplayDuration >Series</DisplayDuration>}
+                                        <div className='description_box landing_box'>
+                                            <span className="d-inline-block" tabIndex="0" data-toggle="tooltip" title={item?.description}>
+                                                <LineClamp>
+                                                    {item?.description}
+                                                </LineClamp>
+                                            </span>
                                         </div>
-                                        <Image src={item?.image} width='720' height='420' alt="akdjfa" className='img-fluid rounded' />
                                     </div>
-                                </div>
-                                <div className='_titleContainer_1wg2e_142'>
-                                    <div className='_title_1wg2e_19'>{item.title}</div>
-                                </div>
+                                    <Image src={item?.image} width='720' height='420' alt="akdjfa" className='img-fluid rounded landing_image' />
+                                </PosterSection>
                             </div>
+                            <BannerTitle>
+                                <TitleDiv>{item.title}</TitleDiv>
+                            </BannerTitle>
                         </div>
-                    )
-                })
+                    </div>
+                )
                 }
             </Slider >
 
