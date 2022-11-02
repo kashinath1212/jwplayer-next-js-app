@@ -6,16 +6,16 @@ import Header from './Header'
 export default function Home() {
   return (
     <div >
-      {/* <Head>
+      <Head>
         <title>Blender app</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Jwplayer Blender Preview App" />
-        <meta property="og:url" content='' />
+        {/* <meta property="og:url" content='' /> */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content='Jwplayer Blender app' />
         <meta property="og:description" content="Jwplayer Blender Preview App" />
-        <meta property="og:image" content='' />
-      </Head> */}
+        <meta property="og:image" content='https://assets-jpcust.jwpsrv.com/thumbnails/9pndcdhu-720.jpg' />
+      </Head>
 
       <main>
         <Blender />
