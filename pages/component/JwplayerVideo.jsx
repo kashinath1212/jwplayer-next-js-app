@@ -16,7 +16,7 @@ const JwplayerVideo = (props) => {
 
     return mediaId && (
         <div className="App">
-            <Head>
+            {/* <Head>
                 <title>{data?.title}</title>
                 <meta name="description" content={data?.description} />
                 <meta property="og:url" content={router?.asPath} />
@@ -24,7 +24,7 @@ const JwplayerVideo = (props) => {
                 <meta property="og:title" content={data?.title} />
                 <meta property="og:description" content={data?.description} />
                 <meta property="og:image" content={data?.playlist[0]?.image} />
-            </Head>
+            </Head> */}
             <div
                 className="jw-video-container"
                 data-mediaid={mediaId}
