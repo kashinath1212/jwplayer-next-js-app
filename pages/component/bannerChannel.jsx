@@ -32,17 +32,17 @@ function BannerChannel(props) {
                 <link rel="icon" href='/favicon.ico' />
                 <meta name="description" content={data?.description} />
 
-                <meta name="theme-color" content="#000000" />
+                <meta property="theme-color" content="#000000" />
 
-                <meta name="og:type" content="article" />
-                <meta name="og:title" content={data?.title} />
+                <meta property="og:type" content="article" />
+                <meta property="og:title" content={data?.title} />
 
                 {/* <meta
                     name="og:url"
                     content={post.url}
                 /> */}
-                <meta name="og:description" content={data?.description} />
-                <meta name="og:image" content={data?.image} />
+                <meta property="og:description" content={data?.description} />
+                <meta property="og:image" content={data?.image} />
             </Head>
             <ChannelContainer>
                 <div className='text-start w-75' style={{ zIndex: "1" }}>
