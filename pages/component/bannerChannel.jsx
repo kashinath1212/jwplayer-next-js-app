@@ -25,15 +25,15 @@ function BannerChannel(props) {
 
     return (
         <div>
-            <Head>
+            {/* <Head>
                 <title>{data.title}</title>
                 <meta name="description" content={data?.description} />
-                {/* <meta property="og:url" content={router?.asPath} /> */}
+                <meta property="og:url" content={router?.asPath} />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content={data?.title} />
                 <meta property="og:description" content={data?.description} />
-                {/* <meta property="og:image" content="https://assets-jpcust.jwpsrv.com/thumbnails/9pndcdhu-720.jpg" /> */}
-            </Head>
+                <meta property="og:image" content="https://assets-jpcust.jwpsrv.com/thumbnails/9pndcdhu-720.jpg" />
+            </Head> */}
             <ChannelContainer>
                 <div className='text-start w-75' style={{ zIndex: "1" }}>
                     <div className='text-start w-75 mb-5'>
