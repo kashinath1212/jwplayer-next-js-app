@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Image from 'next/image';
 import { BlurBgImage, DynamicBlur, HomeMain } from './api/StyledComponents';
 import Banner from './component/Banner';
@@ -5,8 +6,7 @@ import LandingPage from './component/LandingPage';
 import Header from './Header';
 
 function Blender(props) {
-  console.log(props);
-  
+
   const structureJson = [
     {
       type: "banner",
@@ -31,7 +31,7 @@ function Blender(props) {
     <div className="App">
       <DynamicBlur>
         <BlurBgImage>
-          <Image src='https://cdn.jwplayer.com/v2/media/LEBW145Q/poster.jpg?width=720' width='1500' height='1500'  alt='alk' />
+          <Image src='https://cdn.jwplayer.com/v2/media/LEBW145Q/poster.jpg?width=720' width='1500' height='1500' alt='alk' />
         </BlurBgImage>
       </DynamicBlur>
       <HomeMain>

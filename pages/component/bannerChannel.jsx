@@ -10,7 +10,6 @@ import { BannerBlurBg, Button, ChannelContainer, DynamicBlur, Span } from '../ap
 function BannerChannel(props) {
     const router = useRouter()
     const [data, setData] = useState(props?.mediaid)
-    console.log(data?.playlist[0]?.image);
     // const getApi = async () => {
     //     try {
     //         const res = await axios.get(`https://cdn.jwplayer.com/v2/media/${router?.query?.mediaid}`)
@@ -28,39 +27,12 @@ function BannerChannel(props) {
         <div>
             <Head>
                 <title>{data.title}</title>
-                {/* <meta name="description" content="Checkout our cool page" key="desc" />
-                <meta property="og:title" content="Social Title for Cool Page" />
-                <meta
-                    property="og:description"
-                    content="And a social description for our cool page"
-                />
-                <meta
-                    property="og:image"
-                    content="https://assets-jpcust.jwpsrv.com/thumbnails/9pndcdhu-720.jpg"
-                /> */}
-
-
-                {/* <!-- HTML Meta Tags --> */}
-                {/* <title>Social Title for Cool Page</title> */}
                 <meta name="description" content={data?.description} />
-
-                {/* <!-- Facebook Meta Tags --> */}
                 <meta property="og:url" content={data?.playlist[0]?.image} />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content={data?.title} />
                 <meta property="og:description" content={data?.description} />
                 <meta property="og:image" content={data?.playlist[0]?.image} />
-
-                {/* <!-- Twitter Meta Tags --> */}
-                {/* <meta name="twitter:card" content="summary_large_image" />
-                <meta property="twitter:domain" content="jwplayer-next-js-app.vercel.app" />
-                <meta property="twitter:url" content="https://jwplayer-next-js-app.vercel.app/component/bannerChannel?mediaid=h7pkBUcC" />
-                <meta name="twitter:title" content="Social Title for Cool Page" />
-                <meta name="twitter:description" content="And a social description for our cool page" />
-                <meta name="twitter:image" content="https://assets-jpcust.jwpsrv.com/thumbnails/9pndcdhu-720.jpg" /> */}
-
-                {/* <!-- Meta Tags Generated via https://www.opengraph.xyz --> */}
-
             </Head>
             <ChannelContainer>
                 <div className='text-start w-75' style={{ zIndex: "1" }}>
