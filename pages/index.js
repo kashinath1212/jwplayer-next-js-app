@@ -6,7 +6,7 @@ import Header from './Header'
 export default function Home() {
   return (
     <div >
-      <Head>
+      {/* <Head>
         <title>Blender app</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Jwplayer Blender Preview App" />
@@ -15,7 +15,7 @@ export default function Home() {
         <meta property="og:title" content='Jwplayer Blender app' />
         <meta property="og:description" content="Jwplayer Blender Preview App" />
         <meta property="og:image" content='' />
-      </Head>
+      </Head> */}
 
       <main>
         <Blender />
