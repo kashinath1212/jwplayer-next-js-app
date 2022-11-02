@@ -42,7 +42,7 @@ function BannerChannel(props) {
                     content={post.url}
                 /> */}
                 <meta property="og:description" content={data?.description} />
-                <meta property="og:image" content={data?.image} />
+                <meta property="og:image" content={data?.playlist[0]?.image} />
             </Head>
             <ChannelContainer>
                 <div className='text-start w-75' style={{ zIndex: "1" }}>
