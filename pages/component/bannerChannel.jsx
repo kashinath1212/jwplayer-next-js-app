@@ -27,7 +27,7 @@ function BannerChannel(props) {
     return (
         <div>
             <Head>
-                <title>Cool Title</title>
+                <title>{data.title}</title>
                 {/* <meta name="description" content="Checkout our cool page" key="desc" />
                 <meta property="og:title" content="Social Title for Cool Page" />
                 <meta
@@ -42,14 +42,14 @@ function BannerChannel(props) {
 
                 {/* <!-- HTML Meta Tags --> */}
                 {/* <title>Social Title for Cool Page</title> */}
-                <meta name="description" content="And a social description for our cool page" />
+                <meta name="description" content={data?.description} />
 
                 {/* <!-- Facebook Meta Tags --> */}
                 <meta property="og:url" content={data?.playlist[0]?.image} />
                 <meta property="og:type" content="website" />
-                <meta property="og:title" content="Social Title for Cool Page" />
-                <meta property="og:description" content="And a social description for our cool page" />
-                <meta property="og:image" content="https://assets-jpcust.jwpsrv.com/thumbnails/9pndcdhu-720.jpg" />
+                <meta property="og:title" content={data?.title} />
+                <meta property="og:description" content={data?.description} />
+                <meta property="og:image" content={data?.playlist[0]?.image} />
 
                 {/* <!-- Twitter Meta Tags --> */}
                 {/* <meta name="twitter:card" content="summary_large_image" />
