@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import ReactJwPlayer from "react-jw-player";
 
 const JwplayerVideo = (props) => {
-    // const router = useRouter()
+    const router = useRouter()
     const [mediaId, setMediaId] = useState(props.mediaid)
     const [data, setData] = useState(props?.data)
     console.log(data);
@@ -19,7 +19,7 @@ const JwplayerVideo = (props) => {
             <Head>
                 <title>{data?.title}</title>
                 <meta name="description" content={data?.description} />
-                <meta property="og:url" content={data?.playlist[0]?.image} />
+                <meta property="og:url" content={router?.asPath} />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content={data?.title} />
                 <meta property="og:description" content={data?.description} />
